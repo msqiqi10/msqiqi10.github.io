@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zeru Zhang</title>
+<meta name="description" content="Zeru Zhang, Ph.D. — machine learning engineer working on agentic LLM systems, MCP tool servers, multi-agent RAG, and parameter-efficient fine-tuning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1b1f24; --muted:#5b6470; --line:#e5e8ec; --accent:#1f5fbf; --chip:#f2f5f9;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#111418; --fg:#e7eaee; --muted:#9aa4b0; --line:#262c33; --accent:#7fb0ff; --chip:#1a1f25; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:56px 16px 72px}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+header h1{font-size:2.2rem;margin:0 0 4px;letter-spacing:-.02em}
+.tagline{font-size:1.1rem;color:var(--muted);margin:0 0 14px}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.95rem}
+section{margin-top:44px}
+h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.item{margin-bottom:22px}
+.item-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.item-title{font-weight:600}
+.item-sub{color:var(--muted);font-size:.95rem}
+.when{color:var(--muted);font-size:.9rem;white-space:nowrap}
+ul{margin:6px 0 0;padding-left:20px} li{margin:3px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.85rem}
+.skill-row{display:grid;grid-template-columns:150px 1fr;gap:6px 14px;margin-bottom:10px;align-items:start}
+.skill-row .lbl{font-weight:600;font-size:.92rem;padding-top:2px}
+.pub{margin-bottom:10px}
+.venue{font-weight:600}
+.badge{display:inline-block;font-size:.75rem;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:1px}
+footer{margin-top:56px;color:var(--muted);font-size:.85rem}
+@media (max-width:560px){
+  header h1{font-size:1.8rem}
+  .skill-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Zeru Zhang, Ph.D.</h1>
+  <p class="tagline">Machine learning engineer &middot; agentic LLM systems, MCP tool servers, multi-agent RAG, parameter-efficient fine-tuning</p>
+  <div class="links">
+    <a href="mailto:zzz0054@auburn.edu">zzz0054@auburn.edu</a>
+    <a href="https://scholar.google.com/citations?user=iaFJQhIAAAAJ">Google Scholar</a>
+    <a href="https://github.com/msqiqi10">GitHub</a>
+    <span style="color:var(--muted)">Auburn, AL &middot; open to relocation</span>
+  </div>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>I am a Ph.D. machine learning engineer (Computer Science &amp; Software Engineering, Auburn University, 2025) and an Anthropic Claude Certified Architect. I build LLM applications that use tools and retrieval to stay grounded: MCP tool servers on the Anthropic SDK, multi-agent RAG pipelines, and FastAPI back ends with asynchronous job orchestration. My research background spans parameter-efficient and federated fine-tuning, multimodal generative-AI security, and robust graph learning, with papers at NeurIPS, ICML, AISTATS, EMNLP, and WWW.</p>
+</section>
+
+<section>
+  <h2>Experience &amp; Projects</h2>
+
+  <div class="item">
+    <div class="item-head"><div><div class="item-title">Graduate Research Assistant</div><div class="item-sub">Auburn University &mdash; PAGER gene-set platform &amp; graph learning</div></div><div class="when">Sep 2025 &ndash; present</div></div>
+    <ul>
+      <li>Contributed to a PAGER MCP server in Python on the Anthropic SDK that exposes gene-set search, hypergeometric enrichment, and pathway-network lookups as typed MCP tools Claude calls through a tool-use loop.</li>
+      <li>Refactored the PAGER3 back end from a legacy PHP portal into a FastAPI REST service with JSON endpoints for gene-set search and enrichment analysis (p-values, FDR) over an Oracle database.</li>
+      <li>Developed GOLDEN-GNN, a self-supervised GNN over PubMedBERT gene-set embeddings with anti-collapse regularization, a 640-run architecture screen, Leiden clustering, and knowledge-graph construction.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><div><div class="item-title">PAG-Agent (ChatPathways)</div><div class="item-sub">LLM-assisted bioinformatics research assistant &mdash; bioRxiv 2026</div></div><div class="when">2024 &ndash; 2026</div></div>
+    <ul>
+      <li>FastAPI application that routes bulk RNA-seq, single-cell, gene-list, and differential-expression inputs into multi-step R analysis pipelines.</li>
+      <li>Redis/RQ and MongoDB orchestration for long-running pathway jobs, session persistence, and reproducible downloadable results.</li>
+      <li>Multi-agent RAG layer (Gemini full-context analysis, FAISS retrieval, evidence/recency reranking, GPT synthesis) for grounded literature QA; 92% strong-or-majority consensus on a 40-question benchmark.</li>
+      <li>On citation retrieval, PAG-Agent outperformed six competing LLMs across five literature-support scenarios.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><div><div class="item-title">Parameter-efficient fine-tuning of foundation models</div><div class="item-sub">Auburn University &mdash; AISTATS 2026</div></div><div class="when">2023 &ndash; 2025</div></div>
+    <ul>
+      <li>Rank-adaptive LoRA for federated fine-tuning with Riemannian parameter matching: +21.25% accuracy and 15.2% less training time while keeping parameter efficiency.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><div><div class="item-title">Multimodal generative-AI security</div><div class="item-sub">Auburn University &mdash; NeurIPS 2026</div></div><div class="when">2024 &ndash; 2025</div></div>
+    <ul>
+      <li>Identified advertisement-injection vulnerabilities in text-to-image diffusion models shared on model hubs; raised red-teaming attack success by 38.5% over baselines with up to 64.8% less fine-tuning degradation.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skill-row"><div class="lbl">Agentic &amp; LLM</div><div class="chips"><span class="chip">Anthropic SDK (Claude API)</span><span class="chip">MCP</span><span class="chip">Tool use</span><span class="chip">Multi-agent workflows</span><span class="chip">RAG</span><span class="chip">LLM evals</span><span class="chip">Prompt engineering</span><span class="chip">LangChain</span><span class="chip">FAISS</span></div></div>
+  <div class="skill-row"><div class="lbl">Model adaptation</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">Hugging Face Transformers</span><span class="chip">LoRA / QLoRA / PEFT</span><span class="chip">DeepSpeed</span><span class="chip">FSDP</span></div></div>
+  <div class="skill-row"><div class="lbl">Back end</div><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Redis/RQ</span><span class="chip">MongoDB</span><span class="chip">Async job orchestration</span><span class="chip">Java</span><span class="chip">Shell</span></div></div>
+  <div class="skill-row"><div class="lbl">Evaluation &amp; safety</div><div class="chips"><span class="chip">Red teaming</span><span class="chip">Robustness evaluation</span><span class="chip">Bias &amp; fairness testing</span></div></div>
+</section>
+
+<section>
+  <h2>Selected Publications</h2>
+  <p class="item-sub" style="margin-top:-4px">Full list on <a href="https://scholar.google.com/citations?user=iaFJQhIAAAAJ">Google Scholar</a>.</p>
+  <div class="pub"><a href="https://openreview.net/forum?id=qzXTcdJ3oV">Exploring Advertising Manipulation in Diffusion Image Generation</a>. <span class="venue">NeurIPS 2026</span> (poster).</div>
+  <div class="pub"><a href="https://proceedings.mlr.press/v300/zhou26a.html">Noise-Free Dynamic Rank-Adaptation via Riemannian Methods in Federated Fine-Tuning</a>. <span class="venue">AISTATS 2026</span>.</div>
+  <div class="pub"><a href="https://www.biorxiv.org/content/10.64898/2026.06.02.729674">PAG-Agent: A Biologist-oriented Research Assistant for Context-aware Pathway-level Analysis and Interpretation</a>. <span class="venue">bioRxiv 2026</span>.</div>
+  <div class="pub"><a href="https://doi.org/10.1016/bs.pmbts.2026.01.023">AI-driven Gene-Sets, Networks, Pathways, and Interactions Analyses of Multi-omics Data</a>. <span class="venue">Prog. Mol. Biol. Transl. Sci.</span>, 2026.</div>
+  <div class="pub">Effective Federated Graph Matching. <span class="venue">ICML 2024</span>.</div>
+  <div class="pub">Input-agnostic Certified Group Fairness via Gaussian Parameter Smoothing. <span class="venue">ICML 2022</span>.</div>
+  <div class="pub">Expressive 1-Lipschitz Neural Networks for Robust Multiple Graph Learning against Adversarial Attacks. <span class="venue">ICML 2021</span>.</div>
+  <div class="pub">Validating the Lottery Ticket Hypothesis with Inertial Manifold Theory. <span class="venue">NeurIPS 2021</span>.</div>
+  <div class="pub">Adversarial Attack against Cross-lingual Knowledge Graph Alignment. <span class="venue">EMNLP 2021</span>.</div>
+  <div class="pub"><a href="https://doi.org/10.1145/3442381.3449823">Robust Network Alignment via Attack Signal Scaling and Adversarial Perturbation Elimination</a>. <span class="venue">WWW 2021</span>.</div>
+  <div class="pub">Adversarial Attacks on Deep Graph Matching. <span class="venue">NeurIPS 2020</span>.</div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="item"><div class="item-head"><div><div class="item-title">Ph.D., Computer Science and Software Engineering</div><div class="item-sub">Auburn University</div></div><div class="when">2019 &ndash; 2025</div></div></div>
+  <div class="item"><div class="item-head"><div><div class="item-title">M.S., Electrical and Computer Engineering</div><div class="item-sub">Auburn University</div></div><div class="when">2016 &ndash; 2018</div></div></div>
+</section>
+
+<section>
+  <h2>Certifications &amp; Awards</h2>
+  <ul style="padding-left:20px;margin:0">
+    <li>Claude Certified Architect &ndash; Foundations, Anthropic, 2026</li>
+    <li>Excellent Doctoral Student Nomination, Auburn University, 2019</li>
+  </ul>
+</section>
+
+<footer>Work authorization: F-1 STEM OPT (authorized to work in the U.S.); will require H-1B sponsorship.</footer>
+</main>
+</body>
+</html>
